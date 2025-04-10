@@ -77,6 +77,10 @@ const Signinc = () => {
     }
     try {
       const response = await signin(email, password);
+      console.log(response);
+      dispatch(login({  uid: response.data.user,
+        role: response.data.role,
+      }))
       
       toast.success(response.data.message, {
         style: {

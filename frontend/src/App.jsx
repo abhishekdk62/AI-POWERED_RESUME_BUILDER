@@ -21,6 +21,8 @@ const App = () => {
       try {
         const response = await getuserApi();
         dispatch(login({ uid: response.user.id, role: response.user.role }));
+        console.log("at app level",response);
+        
       } catch (error) {
         console.log(error);
       }
@@ -60,9 +62,9 @@ const App = () => {
           <Route
             path="/resume/:id"
             element={
-              // <ProtectUser>
+              <ProtectUser>
                 <Resume />
-              // </ProtectUser>
+               </ProtectUser>
             }
           />
 

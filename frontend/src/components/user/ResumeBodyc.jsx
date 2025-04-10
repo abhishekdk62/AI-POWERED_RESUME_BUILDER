@@ -286,7 +286,7 @@ const ResumeBodyc = () => {
 
           {/* Work Experience */}
           <FormSection title="Work Experience">
-            {experience?.map((exp, index) => (
+            {experience.length>0?(experience?.map((exp, index) => (
               <div key={index} className="border p-4 rounded mb-4 bg-gray-700">
                 <div className="flex justify-between items-center mb-3">
                   <h3 className="text-lg font-semibold">Experience {index + 1}</h3>
@@ -359,7 +359,7 @@ const ResumeBodyc = () => {
                   />
                 </div>
               </div>
-            ))}
+            ))):null}
             <button
               type="button"
               onClick={() =>

@@ -10,7 +10,7 @@ const ProtectAuths = ({ children }) => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate(-1);
+      navigate("/home");
     }
   }, [isAuthenticated, navigate]);
 

@@ -51,7 +51,6 @@ const Headerc = ({ setSelectedTab }) => {
   };
   useEffect(() => {
     if (uid) {
-      console.log("useefect triggered");
 
       getUser();
     }
