@@ -141,6 +141,7 @@ const userSignup = async (req, res) => {
 
 const signin = async (req, res) => {
   try {
+    
     const { email, password } = req.body;
 
     let user = await Admin.findOne({ email });
@@ -159,8 +160,11 @@ const signin = async (req, res) => {
     if (!isMatch) {
       return res.status(400).json("Incorrect Password");
     }
+    console.log("hiii");
+    
 
     generateWebToken(res, user._id, role);
+    console.log(user._id);
 
     res.status(200).json({ message: "Logging In", role,user:user._id });
   } catch (error) {

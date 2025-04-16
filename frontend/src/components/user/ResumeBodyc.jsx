@@ -380,7 +380,7 @@ const ResumeBodyc = () => {
 
           {/* Education */}
           <FormSection val="*" title="Education">
-            {education.map((edu, index) => (
+            {education?.map((edu, index) => (
               <div key={index} className="border p-4 rounded mb-4 bg-gray-700">
                 <div className="flex justify-between items-center mb-3">
                   <h3 className="text-lg font-semibold">Education {index + 1}</h3>
@@ -453,7 +453,7 @@ const ResumeBodyc = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            ))||null}
             <button
               type="button"
               onClick={() =>
